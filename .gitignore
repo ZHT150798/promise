@@ -1,0 +1,33 @@
+ref/
+downstream_tasks/
+*.sh
+
+# Generated data and local test artifacts
+scripts/patch/
+my_utils/wsi/test_png2tiff/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Model weights and serialized checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+*.h5
+*.pkl
+*.pickle
+
+# Whole-slide images and large microscopy/image artifacts
+*.svs
+*.tif
+*.tiff
+*.ndpi
+*.mrxs
+*.scn
+*.vms
+*.vmu
+*.bif
