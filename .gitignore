@@ -31,3 +31,14 @@ __pycache__/
 *.vms
 *.vmu
 *.bif
+
+# Local development settings (may contain credentials; never commit)
+.claude/
+
+# macOS metadata files
+._*
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
