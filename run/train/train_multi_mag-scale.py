@@ -1,5 +1,7 @@
 import sys
 import os
+
+# Standalone training entrypoint; also serves as a numerical reference in tests.
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
 
@@ -220,13 +222,23 @@ def main(args):
     elif pe_type == "uni":
         model = timm.create_model("vit_large_patch16_224", img_size=224, patch_size=16, init_values=1e-5, num_classes=0,
                                   dynamic_img_size=True)
+        uni_checkpoint = getattr(
+            args,
+            "uni_checkpoint",
+            "/media/dell/data/zhangv1/WSISR/huggingface/UNI/pytorch_model.bin",
+        )
         model.load_state_dict(
-            torch.load("/media/dell/data/zhangv1/WSISR/huggingface/UNI/pytorch_model.bin", map_location="cpu"),
+            torch.load(uni_checkpoint, map_location="cpu"),
             strict=True)
         pe_loss_fn = pe_loss.PELoss_uni(model.cuda())
     elif pe_type == "gigapath":
+        gigapath_checkpoint = getattr(
+            args,
+            "gigapath_checkpoint",
+            "/media/dell/data/zhangv1/WSISR/huggingface/prov-gigapath/pytorch_model.bin",
+        )
         model = timm.create_model("hf_hub:prov-gigapath/prov-gigapath", pretrained=False,
-                                  checkpoint_path="/media/dell/data/zhangv1/WSISR/huggingface/prov-gigapath/pytorch_model.bin")
+                                  checkpoint_path=gigapath_checkpoint)
         pe_loss_fn = pe_loss.PELoss_prov(model.cuda())
 
     # set vae adapter

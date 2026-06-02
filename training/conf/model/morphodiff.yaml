@@ -1,0 +1,12 @@
+pretrained_model_name_or_path: ${paths.sd_model}
+osediff_path: ${paths.osediff_checkpoint}
+
+revision: null
+variant: null
+tokenizer_name: null
+
+lora_rank_unet: 32
+lora_rank_vae: 16
+
+pos_prompt: A high-resolution, Clear tissue borders, Clear morphological features, high magnification.
+neg_prompt: blur, low quality,  low resolution, oversmooth, low magnification.

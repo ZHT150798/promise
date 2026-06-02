@@ -1,4 +1,6 @@
 import os
+
+# Pathology feature losses used by training and evaluation.
 import torch
 import timm
 

@@ -2,6 +2,17 @@ ref/
 downstream_tasks/
 *.sh
 
+# Training runs and generated experiment outputs
+experience/
+outputs/
+checkpoints/
+logs/
+eval/
+temp_eval/
+wandb/
+runs/
+events.out.tfevents*
+
 # Generated data and local test artifacts
 scripts/patch/
 my_utils/wsi/test_png2tiff/

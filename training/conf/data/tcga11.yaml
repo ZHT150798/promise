@@ -1,0 +1,18 @@
+name: tcga11
+train_path: YOUR TXT FILE PATH
+val_path: /nas/zhanghongtai/SR/WSI_SR_Protocol/wsisr_pipeline/preset/datasets/tcga_l/val/patch_1024/
+
+deg_type: wsisr_compress
+deg_file_path: ${hydra:runtime.cwd}/training/conf/degradation/realesrgan_wsi.yaml
+
+train_split: train
+train_max_samples: null
+val_split: test
+val_max_samples: 4000
+val_specs:
+  - name: 40x
+    mag: 40x
+    scale: 4
+  - name: 20x
+    mag: 20x
+    scale: 4

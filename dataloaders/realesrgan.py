@@ -1,4 +1,6 @@
 import os
+
+# Image degradation operations shared by datasets and numerical equivalence tests.
 import numpy as np
 import cv2
 import glob

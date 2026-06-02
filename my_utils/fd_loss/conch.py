@@ -1,4 +1,6 @@
 import logging
+
+# CONCH feature encoder used for morphological consistency loss and evaluation.
 import math
 from functools import partial
 from typing import Callable, List, Optional, Sequence, Tuple, Union
@@ -667,7 +669,7 @@ class EncoderWithAttentionalPooler(nn.Module):
         return pooled
 
 
-def build_conch():
+def build_conch(checkpoint_path=None):
     model = VisionTransformer(
         patch_size=16,
         embed_dim=1024,
@@ -685,7 +687,8 @@ def build_conch():
                                          embed_dim=768)
     ## load pre-trained weights
     from huggingface_hub import hf_hub_download
-    checkpoint_path = "/media/dell/data/zhangv1/WSISR/huggingface/TITAN/conch_v1_5_pytorch_model.bin"
+    if checkpoint_path is None:
+        checkpoint_path = "/media/dell/data/zhangv1/WSISR/huggingface/TITAN/conch_v1_5_pytorch_model.bin"
     state_dict = torch.load(checkpoint_path, map_location="cpu")
     model.load_state_dict(state_dict, strict=True)
 

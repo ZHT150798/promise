@@ -1,0 +1,12 @@
+name: stub
+builder: stub_wsi_sr
+train_path: null
+val_path: null
+
+deg_type: stub
+deg_file_path: null
+
+train_split: train
+val_split: test
+val_max_samples: 2
+val_specs: []

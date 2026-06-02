@@ -1,0 +1,13 @@
+lambda_l2: 2.0
+lambda_lpips: 4.0
+lambda_pe: 1.0
+lambda_gan: 0.05
+
+lpips_type: stub
+pe_type: stub
+uni_checkpoint: null
+gigapath_checkpoint: null
+
+gan: true
+gan_disc_type: stub
+gan_loss_type: stub

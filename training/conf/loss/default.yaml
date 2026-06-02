@@ -1,0 +1,13 @@
+lambda_l2: 2.0
+lambda_lpips: 4.0
+lambda_pe: 1.0
+lambda_gan: 0.05
+
+pe_type: conch
+conch_checkpoint: ${paths.conch_bin}
+uni_checkpoint: ${paths.uni_checkpoint}
+gigapath_checkpoint: ${paths.gigapath_checkpoint}
+
+gan: true
+gan_disc_type: vagan
+gan_loss_type: multilevel_sigmoid_s

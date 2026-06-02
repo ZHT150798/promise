@@ -1,0 +1,17 @@
+defaults:
+  - paths: local
+  - data: tcga11
+  - degradation: realesrgan_wsi
+  - model: morphodiff
+  - loss: default
+  - train: default
+  - _self_
+
+seed: 123
+output_dir: experience/osepath
+
+hydra:
+  run:
+    dir: ${output_dir}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  job:
+    chdir: false

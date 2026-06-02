@@ -1,0 +1,37 @@
+resolution: 512
+batch_size: 4
+num_epochs: 10000
+num_samples_eval: 500
+max_steps: 150000
+ckpt_steps: 500
+grad_accum: 4
+gradient_checkpointing: false
+
+lr: 5e-5
+lr_stage2: 2e-5
+gan_start_step: 100000
+lr_scheduler: constant
+lr_warmup_steps: 500
+lr_num_cycles: 1
+lr_power: 1.0
+
+dataloader_num_workers: 8
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_weight_decay: 1e-2
+adam_epsilon: 1e-8
+max_grad_norm: 1.0
+
+allow_tf32: false
+report_to: tensorboard
+mixed_precision: fp16
+enable_xformers_memory_efficient_attention: false
+set_grads_to_none: false
+logging_dir: logs
+tracker_project_name: train_osediff
+neg_prob: 0.05
+
+val:
+  scales: [40x, 20x]
+  skip_fid: false
+  fid_batch_size: 8
