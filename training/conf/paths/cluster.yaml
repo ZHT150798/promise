@@ -1,5 +1,5 @@
-sd_model: /path/to/stable-diffusion
-osediff_checkpoint: /path/to/morphodiff.pkl
+sd_model: /path/to/sd-turbo
+osediff_checkpoint: null
 
 conch_bin: /path/to/conch_v1_5_pytorch_model.bin
 uni_checkpoint: /path/to/UNI/pytorch_model.bin

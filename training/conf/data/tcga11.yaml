@@ -1,6 +1,6 @@
 name: tcga11
-train_path: YOUR TXT FILE PATH
-val_path: /nas/zhanghongtai/SR/WSI_SR_Protocol/wsisr_pipeline/preset/datasets/tcga_l/val/patch_1024/
+train_path: /path/to/dataset/train
+val_path: /path/to/dataset/val
 
 deg_type: wsisr_compress
 deg_file_path: ${hydra:runtime.cwd}/training/conf/degradation/realesrgan_wsi.yaml

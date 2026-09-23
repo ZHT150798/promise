@@ -1,7 +1,7 @@
-sd_model: /media/dell/data1/hugging_face/sd-turbo
-osediff_checkpoint: /media/dell/data1/WSISR/wsisr_pipeline/experience/model_52001.pkl
+sd_model: /path/to/sd-turbo
+osediff_checkpoint: null
 
-conch_bin: /media/dell/data1/hugging_face/TITAN/conch_v1_5_pytorch_model.bin
-uni_checkpoint: /media/dell/data1/hugging_face/UNI/pytorch_model.bin
-gigapath_checkpoint: /media/dell/data1/hugging_face/prov-gigapath/pytorch_model.bin
+conch_bin: /path/to/conch_v1_5_pytorch_model.bin
+uni_checkpoint: /path/to/UNI/pytorch_model.bin
+gigapath_checkpoint: /path/to/prov-gigapath/pytorch_model.bin
 hf_root: null
