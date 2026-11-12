@@ -15,6 +15,9 @@ morphological consistency loss based on pathology image features.
    configuration, single- and multi-GPU training, and tests.
 3. Use `run/infer/patch_level_infer.py` for patch reconstruction and evaluation,
    or `run/infer/wsi_infer_to_tif.py` for whole-slide reconstruction.
+4. For the distilled student MorphoDiff-Lite, see
+   [morphodiff_lite/README.md](morphodiff_lite/README.md). It runs in its own
+   Python environment.
 
 ## Repository structure
 
@@ -27,6 +30,7 @@ morphological consistency loss based on pathology image features.
 | `run/` | Standalone training, inference, and evaluation scripts |
 | `my_utils/` | Pathology feature losses, image metrics, and WSI utilities |
 | `scripts/` | Patch extraction and sampling tools |
+| `morphodiff_lite/` | MorphoDiff-Lite distillation and inference, modified from [AdcSR](https://github.com/Guaishou74851/AdcSR) |
 
 Model weights and pathology datasets are not included in this repository.
 Configure their locations before running training or inference.
