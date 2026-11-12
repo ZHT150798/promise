@@ -1,6 +1,6 @@
 # PROMISE
 
-Official implementation of **PROMISE** (Pathology Reconstruction On-demand via
+Official implementation of **PROMISE** (Pathology image Reconstruction On-demand via
 Morphologically Informed Super-resolution Engine), a framework for storing
 whole-slide pathology images at low resolution and reconstructing them on demand.
 
